@@ -10,3 +10,8 @@ puts "Exercise 7"
 puts "----------"
 
 # Your code goes here ...
+ print "Enter a new store name: "
+@new_store_name = gets.chomp
+store_rename = Store.create(name: @new_store_name)
+
+puts "Error, " + store_rename.errors.messages[:annual_revenue].join()
